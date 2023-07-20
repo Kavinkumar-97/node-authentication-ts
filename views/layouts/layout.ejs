@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta data -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <title><%= locals.title || 'Node Authentication' %></title>
+  
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/27b86ddd38.js"
+      crossorigin="anonymous"
+    ></script>
+  
+    <!-- Adding our custom css -->
+    <link rel="stylesheet" href="/css/common.css" >
+    <%- style %>
+  </head>
+  
+  <body>
+    <div class="main">    
+      <!-- Adding body -->
+      <%- body %>
+    </div>
+  
+    <!-- Our own scripts -->
+    <%- script %>
+  </body>
+</html>
