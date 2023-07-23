@@ -8,7 +8,7 @@ export const config = (): passport.PassportStatic => {
       {
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: 'http://localhost:8000/google/callback',
+        callbackURL: 'https://weary-tan-gorilla.cyclic.app/google/callback',
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
