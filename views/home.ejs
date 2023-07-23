@@ -1,1 +1,31 @@
-<h1>Home</h1>
+<div style="display: flex; padding: 0.25rem 2rem; justify-content: space-between; align-items: center; background-color: #eee">
+  <h1>Home</h1>
+  <a href="/signout">Sign Out</a>
+</div>
+<link rel="stylesheet" href="/css/sign-in.css">
+
+<div class="container-wrapper" style="height: auto">
+  <section class="sign-in-section" style="margin-top: 2rem;justify-content: start">
+    <form class="sign-in-form" action="/change-password" method="post">
+
+      <!-- Password Field -->
+      <div class="password-hint">
+        <label for="password">Password</label>
+      </div>
+      <input type="password" name="password" id="password"/>
+
+      <!-- Confirm Password Field -->
+      <div class="password-hint">
+        <label for="confirm-password">Confirm Password</label>
+      </div>
+      <input type="password" name="confirmPassword" id="confirm-password"/>
+
+      <% if(locals.flash && locals.flash.error) {%>
+        <p class="error-text"><%= locals.flash.error %></p>
+      <% } %>
+
+      <!-- Sign In Button -->
+      <button type="submit">Change Password</button>
+    </form>
+  </section>
+</div>

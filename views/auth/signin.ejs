@@ -2,7 +2,7 @@
 
 <div class="container-wrapper">
   <section class="sign-in-section">
-    <form class="sign-in-form" action="" method="post">
+    <form class="sign-in-form" action="/signin" method="post">
       <!-- Email Field -->
       <label for="email">Email Address</label>
       <input type="email" name="email" id="email"/>
@@ -14,12 +14,18 @@
       </div>
       <input type="password" name="password" id="password"/>
 
+      <% if(locals.flash && locals.flash.error) {%>
+        <p class="error-text"><%= locals.flash.error %></p>
+      <% } %>
+
       <!-- Sign In Button -->
       <button type="submit">Sign In</button>
     </form>
 
+    <!-- Google Sign In -->
     <button class="google-signin-btn" type="submit">Sign In With Google</button>
 
+    <!-- Create New Account -->
     <div class="sign-up-container">
       New to User? <a href='/signup'>Create an account</a>
     </div>

@@ -1,1 +1,40 @@
-<h1>Sign Up</h1>
+<link rel="stylesheet" href="/css/sign-in.css">
+
+<div class="container-wrapper">
+  <section class="sign-in-section">
+    <form class="sign-in-form" action="/signup" method="post">
+      <!-- Email Field -->
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name"/>
+
+      <!-- Email Field -->
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email"/>
+
+      <!-- Password Field -->
+      <div class="password-hint">
+        <label for="password">Password</label>
+      </div>
+      <input type="password" name="password" id="password"/>
+
+      <!-- Password Field -->
+      <div class="password-hint">
+        <label for="confirm-password">Confirm Password</label>
+      </div>
+      <input type="password" name="confirmPassword" id="confirm-password"/>
+
+      <% if(locals.flash && locals.flash.error) {%>
+        <p class="error-text"><%= locals.flash.error %></p>
+      <% } %>
+
+      <!-- Sign In Button -->
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <!--<button class="google-signin-btn" type="submit">Sign In With Google</button>-->
+
+    <div class="sign-up-container">
+      Already having account? <a href='/signin'>Sign In</a>
+    </div>
+  </section>
+</div>

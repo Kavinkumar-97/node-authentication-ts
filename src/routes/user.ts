@@ -7,6 +7,7 @@ import {
   signout,
   createSession,
   createUser,
+  changePassword,
 } from '@controllers/user';
 import checkAuthentication from '@middlewares/check-authentication';
 
@@ -18,9 +19,13 @@ router.get('/signout', checkAuthentication, signout);
 
 router.post(
   '/signin',
-  passport.authenticate('local', { successRedirect: '/' }),
+  passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/signin',
+  }),
   createSession,
 );
 router.post('/signup', createUser);
+router.post('/change-password', changePassword);
 
 export default router;
