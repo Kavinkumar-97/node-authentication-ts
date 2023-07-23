@@ -15,7 +15,7 @@
       <input type="password" name="password" id="password"/>
 
       <% if(locals.flash && locals.flash.error) {%>
-        <p class="error-text"><%= locals.flash.error %></p>
+      <p class="error-text"><%= locals.flash.error %></p>
       <% } %>
 
       <!-- Sign In Button -->
@@ -23,7 +23,9 @@
     </form>
 
     <!-- Google Sign In -->
-    <button class="google-signin-btn" type="submit">Sign In With Google</button>
+    <a href="/google" class="google-signin-btn">
+      Sign In With Google
+    </a>
 
     <!-- Create New Account -->
     <div class="sign-up-container">

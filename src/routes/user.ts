@@ -16,6 +16,17 @@ const router: Router = Router();
 router.get('/signin', signin);
 router.get('/signup', signup);
 router.get('/signout', checkAuthentication, signout);
+router.get(
+  '/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] }),
+);
+router.get(
+  '/google/callback',
+  passport.authenticate('google', {
+    failureRedirect: '/signin',
+    successRedirect: '/',
+  }),
+);
 
 router.post(
   '/signin',

@@ -6,6 +6,8 @@ declare global {
       PWD: string;
       MONGO_DB_URL: string;
       SESSION_SECRET: string;
+      CLIENT_ID: string;
+      CLIENT_SECRET: string;
     }
   }
 }

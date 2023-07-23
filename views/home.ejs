@@ -1,13 +1,17 @@
+<link rel="stylesheet" href="/css/sign-in.css">
+
 <div style="display: flex; padding: 0.25rem 2rem; justify-content: space-between; align-items: center; background-color: #eee">
   <h1>Home</h1>
   <a href="/signout">Sign Out</a>
 </div>
-<link rel="stylesheet" href="/css/sign-in.css">
+
+<p style="padding: 0.25rem 2rem; margin-top: 2rem;">Name: <%= locals.user.name %></p>
+<p style="padding: 0.25rem 2rem;">Email: <%= locals.user.email %></p>
 
 <div class="container-wrapper" style="height: auto">
   <section class="sign-in-section" style="margin-top: 2rem;justify-content: start">
     <form class="sign-in-form" action="/change-password" method="post">
-
+      <h2 style="font-size: 24px; text-align: center; margin-bottom: 0.25rem; font-weight: 500;">Change Password</h2>
       <!-- Password Field -->
       <div class="password-hint">
         <label for="password">Password</label>

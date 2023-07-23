@@ -11,6 +11,7 @@ import flash from 'connect-flash';
 import routes from '@routes/index';
 import db from '@config/mongoose';
 import { config } from '@config/passport-local-strategy';
+import { config as googleConfig } from '@config/passport-google-oauth-startegy';
 import setAuthenticatedUser from '@middlewares/set-authenticated-user';
 import setFlash from '@middlewares/set-flash';
 
@@ -18,6 +19,7 @@ const app: Express = express();
 const port = process.env.PORT || 8080;
 const mongoClient = db.getClient();
 const passportLocal = config();
+const passportGoogle = googleConfig();
 
 // Configuring Body & Cookie Parsers
 app.use(cookieParser());
