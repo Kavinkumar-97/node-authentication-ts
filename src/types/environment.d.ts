@@ -8,6 +8,8 @@ declare global {
       SESSION_SECRET: string;
       CLIENT_ID: string;
       CLIENT_SECRET: string;
+      MAILER_FROM: string;
+      MAILER_SECRET: string;
     }
   }
 }

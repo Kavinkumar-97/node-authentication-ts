@@ -5,14 +5,14 @@
     <form class="sign-in-form" action="/signin" method="post">
       <!-- Email Field -->
       <label for="email">Email Address</label>
-      <input type="email" name="email" id="email"/>
+      <input type="email" name="email" id="email" required/>
 
       <!-- Password Field -->
       <div class="password-hint">
         <label for="password">Password</label>
-        <a class="forgot-password" href="">Forgot Password?</a>
+        <a class="forgot-password" href="/forgot-password">Forgot Password?</a>
       </div>
-      <input type="password" name="password" id="password"/>
+      <input type="password" name="password" id="password" required/>
 
       <% if(locals.flash && locals.flash.error) {%>
       <p class="error-text"><%= locals.flash.error %></p>
